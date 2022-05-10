@@ -238,6 +238,7 @@ footer {
   .project-img-container {
     width: 15em;
     min-height: 10em;
+    height: 100%;
     align-self: center;
     border-radius: var(--border-radius);
   }
