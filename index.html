@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Jan-Erik</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="url" content="https://jankku.fi" />
+    <meta name="description" content="Jan-Erik's website" />
+    <meta name="language" content="en_us" />
+    <meta name="author" content="Jan-Erik" />
+    <meta property="og:site_name" content="jankku.fi" />
+    <meta property="og:title" content="Jan-Erik" />
+    <meta property="og:description" content="Jan-Erik's website" />
+    <meta property="og:url" content="https://jankku.fi" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" sizes="any" href="img/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/img/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <script defer data-domain="jankku.fi" src="https://analytics.jankku.fi/js/plausible.js"></script>
+  </head>
+
+  <body>
+    <main class="main">
+      <section class="introduction">
+        <h1 class="introduction-title">Jan-Erik</h1>
+        <p class="introduction-text">
+          Hi, and welcome to my website. I'm a full-stack developer from Finland. My most used languages/technologies
+          are Kotlin, JS/TS, React/React Native, Express and PostgreSQL. I also like tinkering with servers. I host my
+          projects, and various services on a few servers (see
+          <a href="https://status.jankku.fi" target="_blank">status page</a>).
+        </p>
+        <ul class="contact">
+          <li class="contact-item">
+            <img class="contact-icon" src="./img/github.svg" alt="GitHub" title="GitHub" />
+            <a class="contact-text" href="https://github.com/Jankku/" target="_blank" rel="noopener noreferrer">
+              <p>Jankku</p>
+            </a>
+          </li>
+          <li class="contact-item">
+            <img class="contact-icon" src="./img/discord.svg" alt="Discord" title="Discord" />
+            <p class="contact-text">Jankku#3000</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+          <a class="project-card" href="https://eino.jankku.fi" target="_blank">
+            <div class="project-img-container" id="gradient-eino">
+              <img class="project-img" src="/img/eino.svg" />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Eino</h3>
+                <img class="project-link-icon" src="img/link.svg" alt="External link" title="External link" />
+              </div>
+              <p>
+                Book and movie tracker, Full-stack project. Express.JS TypeScript backend with PostgreSQL database,
+                React.JS frontend and Kotlin Android application. In addition to JWT authentication and book/movie CRUD
+                actions, both clients have search feature and profile page for statistics. Backend testing is done with
+                Chai and Mocha. Deployed with Docker Compose.
+              </p>
+            </div>
+          </a>
+
+          <a
+            class="project-card"
+            href="https://github.com/Jankku/rn-rss-reader"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-img-container" id="gradient-yle-rss-reader">
+              <img class="project-img" src="/img/yle-rss-reader.svg" />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Yle RSS Reader</h3>
+                <img class="project-link-icon" src="img/github.svg" alt="GitHub icon" title="GitHub icon" />
+              </div>
+              <p>
+                Yle regional RSS feed reader, React Native/Expo. Location based region fetching with manual option.
+                Features include saving, sharing and reading articles. Article reader or WebView for reading. Articles
+                are saved in a Realm database. Unit and snapshot tests with Jest and Testing Library. Light/dark themes.
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://github.com/Jankku/alphawall" target="_blank" rel="noopener noreferrer">
+            <div class="project-img-container" id="gradient-alphawall">
+              <img class="project-img" src="/img/alphawall.svg" />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">AlphaWall</h3>
+                <img class="project-link-icon" src="img/github.svg" alt="GitHub icon" title="GitHub icon" />
+              </div>
+              <p>
+                Wallpaper Android application. Kotlin, MVVM, Retrofit, Glide, Moshi, Jetpack libraries. AlphaCoders API
+                used for content. Sort wallpapers by views, rating, favorites and newest. Set pictures as wallpaper or
+                download it to your device. Search with keywords.
+              </p>
+            </div>
+          </a>
+
+          <a class="project-card" href="https://github.com/Jankku/notes" target="_blank" rel="noopener noreferrer">
+            <div class="project-img-container" id="gradient-notes">
+              <img class="project-img" src="/img/notes.svg" />
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Notes</h3>
+                <img class="project-link-icon" src="img/github.svg" alt="GitHub icon" title="GitHub icon" />
+              </div>
+              <p>
+                Simple note-taking Android application written in Kotlin. Features include press back to save, open
+                keyboard when opening note, export/import notes, and language switcher (fin/eng). Has material design
+                and light/dark themes. This is my first Android app I have made.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title">Self-hosted services</h2>
+        <p>Here's a list of services I currently host on my servers.</p>
+        <ul class="self-hosted">
+          <li class="self-hosted-item">
+            <a href="https://status.jankku.fi" target="_blank">Uptime Kuma (status.jankku.fi)</a>
+          </li>
+          <li class="self-hosted-item">
+            <a href="https://rss.jankku.fi" target="_blank">Miniflux RSS reader (rss.jankku.fi)</a>
+          </li>
+          <li class="self-hosted-item">
+            <a href="https://analytics.jankku.fi" target="_blank">Plausible analytics (analytics.jankku.fi)</a>
+          </li>
+          <li class="self-hosted-item">
+            <a href="https://search.jankku.fi" target="_blank">SearxNG (search.jankku.fi)</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p><small>&copy; Jan-Erik, 2022</small></p>
+      <p>
+        <small
+          >This website uses a self-hosted instance of Plausible analytics. For more information see
+          <a href="https://plausible.io/data-policy" target="_blank" rel="noopener noreferrer">this page</a>.</small
+        >
+      </p>
+    </footer>
+  </body>
+</html>
