@@ -64,9 +64,8 @@ main {
 
 a {
   color: var(--link-color);
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 3px;
+  text-decoration: underline solid 2px;
+  text-decoration-skip-ink: none;
 }
 
 section {
