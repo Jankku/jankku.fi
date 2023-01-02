@@ -287,10 +287,10 @@ footer {
 }
 
 #gradient-yle-rss-reader {
-  background: rgb(56, 75, 98);
+  background: rgb(36, 83, 139);
   background: linear-gradient(
     0deg,
-    rgb(56, 75, 98) 0%,
+    rgba(36, 83, 139, 1) 0%,
     rgba(87, 146, 217, 1) 100%
   );
 }
