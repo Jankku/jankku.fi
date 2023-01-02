@@ -53,7 +53,8 @@
 
 body {
   font-size: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -258,24 +259,49 @@ footer {
   opacity: var(--card-text-opacity);
 }
 
+#gradient-liikennekartta {
+  background: rgb(88, 68, 149);
+  background: linear-gradient(
+    0deg,
+    rgba(88, 68, 149, 1) 0%,
+    rgba(135, 118, 189, 1) 100%
+  );
+}
+
 #gradient-eino {
   background: rgb(55, 83, 110);
-  background: linear-gradient(0deg, rgba(55, 83, 110, 1) 0%, rgba(113, 182, 248, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(55, 83, 110, 1) 0%,
+    rgba(113, 182, 248, 1) 100%
+  );
 }
 
 #gradient-alphawall {
   background: rgb(92, 71, 108);
-  background: linear-gradient(0deg, rgba(92, 71, 108, 1) 0%, rgba(87, 136, 217, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(92, 71, 108, 1) 0%,
+    rgba(87, 136, 217, 1) 100%
+  );
 }
 
 #gradient-yle-rss-reader {
   background: rgb(56, 75, 98);
-  background: linear-gradient(0deg, rgb(56, 75, 98) 0%, rgba(87, 146, 217, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(56, 75, 98) 0%,
+    rgba(87, 146, 217, 1) 100%
+  );
 }
 
 #gradient-notes {
   background: rgb(23, 113, 71);
-  background: linear-gradient(0deg, rgba(23, 113, 71, 1) 0%, rgba(110, 197, 151, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(23, 113, 71, 1) 0%,
+    rgba(110, 197, 151, 1) 100%
+  );
 }
 
 /* SELF-HOSTED */
@@ -365,11 +391,12 @@ footer {
   .project-tags {
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0em 0.5em;
+    padding: 0 0.5em;
+    flex-wrap: nowrap;
   }
 
   .project-tag {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
 
   .project-content {
