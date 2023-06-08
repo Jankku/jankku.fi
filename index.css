@@ -149,6 +149,10 @@ footer {
 
 /* PROJECTS */
 
+.projects-section {
+  margin-bottom: 2em;
+}
+
 .projects {
   display: flex;
   flex-flow: row wrap;
@@ -330,6 +334,7 @@ footer {
 
 .self-hosted {
   list-style: none;
+  margin-bottom: 1.5em;
 }
 
 .self-hosted-item {
