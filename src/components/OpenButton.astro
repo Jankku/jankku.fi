@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Props = {
+  link: string;
+};
+
+const { link } = Astro.props;
+---
+
+<a
+  href={link}
+  rel="noopener noreferrer"
+  class="no-underline inline-flex items-center gap-1 rounded-lg bg-blue-400 px-5 py-2.5 text-center
+  text-sm font-medium text-black hover:bg-blue-300"
+>
+  Open
+  <Icon name="arrow-top-right" class="text-l fill-black self-center" />
+</a>

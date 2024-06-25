@@ -1,0 +1,9 @@
+---
+import Line from './Line.astro';
+---
+
+<div class="flex flex-row items-center gap-4 pb-8">
+  <Line />
+  <h2 class="flex-shrink text-xl font-bold"><slot /></h2>
+  <Line />
+</div>

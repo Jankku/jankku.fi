@@ -1,0 +1,32 @@
+---
+import ProjectCard from '@/components/ProjectCard/ProjectCard.astro';
+import ProjectCardList from '@/components/ProjectCardList.astro';
+import SectionTitle from '@/components/SectionTitle.astro';
+import type { HTMLAttributes } from 'astro/types';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+
+type Props = HTMLAttributes<'section'>;
+const props = Astro.props;
+---
+
+<section {...props}>
+  <SectionTitle>Projects</SectionTitle>
+
+  <ProjectCardList>
+    {
+      projects.map(({ data, slug }) => (
+        <ProjectCard
+          title={data.title}
+          description={data.description}
+          platform={data.platform}
+          slug={slug}
+          logo={data.logo}
+          gradient={data.gradient}
+          tags={data.tags}
+        />
+      ))
+    }
+  </ProjectCardList>
+</section>

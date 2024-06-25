@@ -1,0 +1,22 @@
+---
+export type Props = {
+  label: string;
+  size?: 'sm' | 'md';
+  color?: 'gray' | 'blue';
+};
+const { label, size = 'md', color = 'gray' } = Astro.props;
+
+const sizes = {
+  sm: 'px-1 py-0.5 text-xs',
+  md: 'px-2 py-1 text-sm',
+};
+
+const colors = {
+  gray: 'bg-gray-900 text-gray-200',
+  blue: 'bg-slate-800 text-blue-100 ring-1 ring-slate-700',
+};
+---
+
+<li class=`inline-flex items-center rounded-md font-semibold ${colors[color]} ${sizes[size]}`
+  >{label}</li
+>

@@ -1,0 +1,81 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Gradient from '@/components/ProjectCard/Gradient.astro';
+import Tag from '@/components/Tag.astro';
+import SectionTitle from '@/components/SectionTitle.astro';
+import GithubButton from '@/components/GithubButton.astro';
+import OpenButton from '@/components/OpenButton.astro';
+import TagList from '@/components/TagList.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+type Props = {
+  entry: CollectionEntry<'projects'>;
+};
+
+const { entry } = Astro.props;
+const { title, logo, description, screenshots, gradient, features, github, link, tags } =
+  entry.data;
+const hasGithub = github !== undefined;
+---
+
+<Layout title={title}>
+  <Gradient type={gradient} class="flex h-24 w-full sm:h-32">
+    <div
+      class="flex w-full flex-row sm:flex-row items-center justify-center gap-4 bg-gradient-to-t from-slate-950 sm:mx-auto"
+    >
+      <img
+        draggable="false"
+        src={logo}
+        alt={`${title} logo`}
+        class="h-12 w-12 object-contain sm:h-20 sm:w-20"
+      />
+      <h1 class="text-3xl font-bold">{title}</h1>
+    </div>
+  </Gradient>
+  <main class="min-h-screen mx-auto flex max-w-xl flex-col gap-6 px-6 pt-6 pb-12 sm:px-0">
+    <section class="flex flex-col gap-4">
+      <div class="flex flex-wrap gap-6 flex-row items-center justify-between">
+        <TagList>
+          {tags.map((tag) => <Tag label={tag} color="blue" />)}
+        </TagList>
+        <div class="flex flex-row gap-4">
+          {hasGithub ? <GithubButton link={github} /> : null}
+          {link ? <OpenButton link={link} /> : null}
+        </div>
+      </div>
+      <p class="pb-6 font-semibold">{description}</p>
+    </section>
+    <section>
+      <SectionTitle>Features</SectionTitle>
+      <ul class="list-inside list-disc pb-6">
+        {features.map((feature) => <li class="list-item">{feature}</li>)}
+      </ul>
+    </section>
+    {
+      screenshots ? (
+        <section>
+          <SectionTitle>Screenshots</SectionTitle>
+          <div class="flex flex-col gap-8">
+            {screenshots.map((screenshot) => (
+              <Image
+                loading="lazy"
+                src={screenshot}
+                alt={`${title} screenshot`}
+                class="h-100 w-full object-contain"
+              />
+            ))}
+          </div>
+        </section>
+      ) : null
+    }
+  </main>
+</Layout>

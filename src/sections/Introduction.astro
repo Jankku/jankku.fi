@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import Contact from '../components/introduction/Contact.astro';
+import IntroductionText from '../components/introduction/IntroductionText.astro';
+
+type Props = HTMLAttributes<'section'>;
+const props = Astro.props;
+---
+
+<section {...props} class="flex flex-col gap-6">
+  <IntroductionText />
+  <Contact />
+</section>
