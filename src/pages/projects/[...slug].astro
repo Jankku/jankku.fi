@@ -7,7 +7,6 @@ import Tag from '@/components/Tag.astro';
 import SectionTitle from '@/components/SectionTitle.astro';
 import GithubButton from '@/components/GithubButton.astro';
 import OpenButton from '@/components/OpenButton.astro';
-import TagList from '@/components/TagList.astro';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -30,7 +29,7 @@ const hasGithub = github !== undefined;
 <Layout title={title}>
   <Gradient type={gradient} class="flex h-24 w-full sm:h-32">
     <div
-      class="flex w-full flex-row sm:flex-row items-center justify-center gap-4 bg-gradient-to-t from-slate-950 sm:mx-auto"
+      class="flex w-full flex-row sm:flex-row items-center justify-center gap-4 bg-gradient-to-t from-white dark:from-slate-950 sm:mx-auto"
     >
       <img
         draggable="false"
@@ -38,15 +37,15 @@ const hasGithub = github !== undefined;
         alt={`${title} logo`}
         class="h-12 w-12 object-contain sm:h-20 sm:w-20"
       />
-      <h1 class="text-3xl font-bold">{title}</h1>
+      <h1 class="text-3xl font-bold text-black dark:text-white">{title}</h1>
     </div>
   </Gradient>
   <main class="min-h-screen mx-auto flex max-w-xl flex-col gap-6 px-6 pt-6 pb-12 sm:px-0">
     <section class="flex flex-col gap-4">
       <div class="flex flex-wrap gap-6 flex-row items-center justify-between">
-        <TagList>
+        <ul class="flex flex-row gap-2 flex-wrap">
           {tags.map((tag) => <Tag label={tag} color="blue" />)}
-        </TagList>
+        </ul>
         <div class="flex flex-row gap-4">
           {hasGithub ? <GithubButton link={github} /> : null}
           {link ? <OpenButton link={link} /> : null}

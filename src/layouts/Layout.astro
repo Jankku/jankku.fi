@@ -8,7 +8,7 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,12 +29,22 @@ const { title } = Astro.props;
     <link rel="icon" sizes="any" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <script defer data-domain="jankku.fi" src="https://analytics.jankku.fi/js/plausible.js"></script>
+    <script
+      is:inline
+      defer
+      data-domain="jankku.fi"
+      src="https://analytics.jankku.fi/js/plausible.js"></script>
     <style>
       @view-transition {
         navigation: auto;
       }
     </style>
+    <script is:inline>
+      const colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+      document.documentElement.classList.add(colorScheme);
+    </script>
   </head>
   <body class="min-h-screen bg-white font-sans text-black dark:bg-slate-950 dark:text-gray-100">
     <slot />
@@ -48,14 +58,23 @@ const { title } = Astro.props;
         color-scheme: light;
       }
 
+      a {
+        @apply text-cyan-700 underline decoration-2 underline-offset-4 [text-decoration-skip-ink:none];
+      }
+
       @media screen and (prefers-color-scheme: dark) {
         :root {
           color-scheme: dark;
         }
+
+        a {
+          @apply text-cyan-500;
+        }
       }
 
-      a {
-        @apply text-cyan-500 underline decoration-2 underline-offset-4 [text-decoration-skip-ink:none];
+      :focus-visible {
+        @apply ring-cyan-500;
+        outline: 5px solid var(--tw-ring-color);
       }
     </style>
   </body>

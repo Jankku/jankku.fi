@@ -3,14 +3,15 @@ import { Icon } from 'astro-icon/components';
 
 type Props = {
   icon: string;
+  iconTitle: string;
   title: string;
   link: string;
 };
-const { icon, title, link } = Astro.props;
+const { icon, iconTitle, title, link } = Astro.props;
 ---
 
 <li class="flex flex-row gap-2">
-  <Icon name={icon} class="text-xl fill-white self-center" />
+  <Icon name={icon} title={iconTitle} size={24} class="text-xl fill-white self-center" />
   <a href={link} rel="noreferrer">
     <p class="text-lg font-bold">{title}</p>
   </a>

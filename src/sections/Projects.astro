@@ -1,6 +1,5 @@
 ---
 import ProjectCard from '@/components/ProjectCard/ProjectCard.astro';
-import ProjectCardList from '@/components/ProjectCardList.astro';
 import SectionTitle from '@/components/SectionTitle.astro';
 import type { HTMLAttributes } from 'astro/types';
 import { getCollection } from 'astro:content';
@@ -14,7 +13,7 @@ const props = Astro.props;
 <section {...props}>
   <SectionTitle>Projects</SectionTitle>
 
-  <ProjectCardList>
+  <ul class="flex flex-col gap-6">
     {
       projects.map(({ data, slug }) => (
         <ProjectCard
@@ -28,5 +27,5 @@ const props = Astro.props;
         />
       ))
     }
-  </ProjectCardList>
+  </ul>
 </section>

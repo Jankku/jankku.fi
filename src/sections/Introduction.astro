@@ -1,13 +1,37 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import Contact from '../components/introduction/Contact.astro';
-import IntroductionText from '../components/introduction/IntroductionText.astro';
+import ContactItem from '@/components/introduction/ContactItem.astro';
 
 type Props = HTMLAttributes<'section'>;
 const props = Astro.props;
 ---
 
 <section {...props} class="flex flex-col gap-6">
-  <IntroductionText />
-  <Contact />
+  <div class="flex flex-col gap-2">
+    <p>Hello, and welcome to my website. I'm a Finnish full-stack developer.</p>
+    <p>
+      Some of my interests in IT are computers, programming, software documentation, testing, and
+      deployment, Linux servers, networking, and picture/video editing.
+    </p>
+    <p>
+      My other hobbies are mostly reading books and listening to music. Sometimes I watch
+      documentaries, movies and TV shows. To keep track of everything I have read and watched, I
+      created
+      <a href="https://eino.jankku.fi">Eino</a>. More about it below.
+    </p>
+  </div>
+  <ul class="flex content-center gap-4">
+    <ContactItem
+      icon="github"
+      iconTitle="GitHub logo"
+      link="https://github.com/Jankku/"
+      title="Jankku"
+    />
+    <ContactItem
+      icon="discord"
+      iconTitle="Discord logo"
+      link="https://discordapp.com/users/157855363352363008"
+      title="Jankku"
+    />
+  </ul>
 </section>

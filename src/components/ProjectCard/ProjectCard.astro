@@ -17,36 +17,43 @@ const toTitleCase = (str: string) => str[0].toUpperCase() + str.slice(1);
 const platforms = platform.map(toTitleCase).join(', ');
 ---
 
-<a
-  draggable="false"
-  href={`projects/${slug}`}
-  class="group grid overflow-hidden rounded-lg border-2 border-solid border-gray-300 bg-slate-50 text-black no-underline hover:border-sky-400 hover:bg-slate-100 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-gray-700 dark:hover:bg-slate-800 sm:grid-cols-2"
->
-  <div role="listitem" class="columns-1 p-4 sm:col-span-1">
-    <h3 class="text-lg font-semibold">{title}</h3>
-    <p class="w-full pb-6 pt-2 opacity-70">
-      {description}
-    </p>
-    <div>
-      <h4>Platform</h4>
-      <p class="opacity-80">{platforms}</p>
-    </div>
-  </div>
-  <Gradient
-    class="row-start-1 flex h-full flex-col flex-nowrap overflow-hidden group-hover:opacity-90 sm:col-span-1 sm:row-start-auto sm:w-56 sm:justify-self-end"
-    type={gradient}
+<li>
+  <a
+    draggable="false"
+    href={`projects/${slug}`}
+    aria-title={title}
+    class="group grid overflow-hidden rounded-lg border-2 border-solid border-gray-300 bg-slate-50 text-black no-underline hover:border-sky-400 hover:bg-slate-100 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-gray-700 dark:hover:bg-slate-800 sm:grid-cols-2"
   >
-    <div class="flex grow items-center justify-center pt-8">
-      <img
-        draggable="false"
-        class="h-16 w-16 object-contain sm:h-20 sm:w-20"
-        src={logo}
-        alt={`${title} logo`}
-        loading="lazy"
-      />
+    <div class="flex flex-col gap-4 columns-1 p-4 sm:col-span-1">
+      <div>
+        <h3 class="text-lg font-semibold">{title}</h3>
+        <p class="w-full opacity-80">
+          {description}
+        </p>
+      </div>
+      <dl>
+        <dt class="opacity-80">Platform</dt>
+        <dl>{platforms}</dl>
+      </dl>
     </div>
-    <div class="flex justify-end gap-1 py-2 pr-2">
-      {tags.map((tag) => <Tag label={tag} size="sm" />)}
-    </div>
-  </Gradient>
-</a>
+    <Gradient
+      class="group row-start-1 flex h-full flex-col flex-nowrap overflow-hidden group-hover:opacity-90 sm:col-span-1 sm:row-start-auto sm:w-56 sm:justify-self-end"
+      type={gradient}
+    >
+      <div
+        class="transition duration-300 ease-in-out group-hover:scale-110 flex grow items-center justify-center py-8"
+      >
+        <img
+          draggable="false"
+          class="h-16 w-16 object-contain sm:h-20 sm:w-20"
+          src={logo}
+          alt={`${title} logo`}
+          loading="lazy"
+        />
+      </div>
+      <ul class="relative bottom-0 flex text-nowrap justify-end gap-1 pb-2 pr-2">
+        {tags.map((tag) => <Tag label={tag} size="sm" />)}
+      </ul>
+    </Gradient>
+  </a>
+</li>
