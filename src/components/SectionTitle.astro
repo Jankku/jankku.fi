@@ -2,8 +2,12 @@
 import Line from './Line.astro';
 ---
 
-<div class="flex flex-row items-center gap-4 pb-8">
+<div class="flex flex-row items-center gap-3 pb-8">
   <Line />
-  <h2 class="flex-shrink text-2xl font-bold"><slot /></h2>
+  <h2
+    class="flex-shrink text-3xl font-bold lowercase tracking-wide [font-variant-caps:all-small-caps]"
+  >
+    <slot />
+  </h2>
   <Line />
 </div>

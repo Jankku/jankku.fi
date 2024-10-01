@@ -7,8 +7,8 @@ export type Props = {
 const { label, size = 'md', color = 'gray' } = Astro.props;
 
 const sizes = {
-  sm: 'px-1 py-0.5 text-xs',
-  md: 'px-2 py-1 text-sm',
+  sm: 'px-2 py-0 [font-size:0.8rem]',
+  md: 'px-2 py-0.5 text-base',
 };
 
 const colors = {
@@ -17,6 +17,8 @@ const colors = {
 };
 ---
 
-<li class=`inline-flex items-center rounded-md font-semibold ${colors[color]} ${sizes[size]}`>
+<li
+  class=`rounded-lg font-bold tracking-wider ${colors[color]} ${sizes[size]} [font-variant-caps:all-small-caps]`
+>
   {label}
 </li>

@@ -54,8 +54,41 @@ const { title } = Astro.props;
       @tailwind components;
       @tailwind utilities;
 
+      @font-face {
+        font-family: 'Cooper Hewitt';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/CooperHewitt-Book.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Cooper Hewitt';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(/fonts/CooperHewitt-Medium.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Cooper Hewitt';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(/fonts/CooperHewitt-Semibold.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Cooper Hewitt';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(/fonts/CooperHewitt-Bold.woff) format('woff');
+      }
+
       :root {
         color-scheme: light;
+        font-size: 1.1rem;
       }
 
       a {
@@ -75,6 +108,12 @@ const { title } = Astro.props;
       :focus-visible {
         @apply ring-cyan-500;
         outline: 5px solid var(--tw-ring-color);
+      }
+
+      @counter-style circled-alpha {
+        system: fixed;
+        symbols: Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ;
+        suffix: ' ';
       }
     </style>
   </body>

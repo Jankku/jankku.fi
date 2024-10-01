@@ -4,30 +4,42 @@ import SectionTitle from '../SectionTitle.astro';
 
 type Props = HTMLAttributes<'section'>;
 const props = Astro.props;
+
+const frontendTechnologies = [
+  'HTML/CSS',
+  'JavaScript/TypeScript',
+  'React & React Native',
+  'Vue',
+  'Kotlin (Android)',
+];
+
+const backendTechnologies = [
+  'Linux',
+  'Java',
+  'Node.js & Express.js',
+  'PostgreSQL',
+  'Docker (including Compose)',
+];
 ---
 
 <section {...props}>
   <SectionTitle>Technologies</SectionTitle>
-  <div class="flex flex-col gap-4 md:flex-row md:gap-12">
-    <div>
-      <h3 class="text-lg font-semibold">Frontend</h3>
-      <ul class="list-inside list-disc indent-1">
-        <li>HTML/CSS</li>
-        <li>JS/TS</li>
-        <li>React and React Native</li>
-        <li>Vue</li>
-        <li>Kotlin (Android)</li>
+  <div class="flex flex-col gap-6 md:flex-row md:gap-12">
+    <fieldset>
+      <legend>
+        <h3 class="text-xl font-medium pb-2">Frontend</h3>
+      </legend>
+      <ul class="list-inside indent-1 [list-style-type:circled-alpha]">
+        {frontendTechnologies.map((tech) => <li class="before:ps-2 marker:text-xl">{tech}</li>)}
       </ul>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold">Backend</h3>
-      <ul class="list-inside list-disc indent-1">
-        <li>Linux</li>
-        <li>Java</li>
-        <li>Node.js & Express.js</li>
-        <li>PostgreSQL</li>
-        <li>Docker (including Compose)</li>
+    </fieldset>
+    <fieldset>
+      <legend>
+        <h3 class="text-xl font-medium pb-2">Backend</h3>
+      </legend>
+      <ul class="list-inside indent-1 [list-style-type:circled-alpha]">
+        {backendTechnologies.map((tech) => <li class="before:ps-2 marker:text-xl">{tech}</li>)}
       </ul>
-    </div>
+    </fieldset>
   </div>
 </section>

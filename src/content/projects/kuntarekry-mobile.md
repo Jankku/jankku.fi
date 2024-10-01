@@ -1,6 +1,6 @@
 ---
 title: Kuntarekry Mobile
-description: MVP mobile app for FCG. Student group project.
+description: MVP mobile app for FCG. Student group project
 platform: [android]
 github: https://github.com/Jankku/kuntarekry-mobile
 logo: /kuntarekry.svg
@@ -12,5 +12,5 @@ features:
   - Personalised job advertisements
   - Job search, filtering and sorting
   - List and card view for jobs
-  - Like and save advertisements/employers
+  - Like and save jobs advertisements and employers
 ---
