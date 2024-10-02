@@ -1,0 +1,27 @@
+---
+import Link from '@/components/Link.astro';
+import SectionTitle from '@/components/SectionTitle.astro';
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'section'>;
+const props = Astro.props;
+---
+
+<section {...props}>
+  <SectionTitle>Self-hosting</SectionTitle>
+  <p class="pb-4">
+    This and my other websites are self-hosted. I also self-host some third-party services which are
+    listed below.
+  </p>
+  <ul class="list-inside indent-1 mb-4 flex flex-col gap-1">
+    <li class="list-decimal marker:[font-family:Concourse-Index]">
+      <Link href="https://status.jankku.fi">Uptime Kuma (status.jankku.fi)</Link>
+    </li>
+    <li class="list-decimal marker:[font-family:Concourse-Index]">
+      <Link href="https://rss.jankku.fi">Miniflux (rss.jankku.fi)</Link>
+    </li>
+    <li class="list-decimal marker:[font-family:Concourse-Index]">
+      <Link href="https://analytics.jankku.fi">Plausible Analytics (analytics.jankku.fi)</Link>
+    </li>
+  </ul>
+</section>

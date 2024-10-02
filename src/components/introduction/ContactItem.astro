@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon/components';
+import Link from '../Link.astro';
+
+type Props = {
+  icon: string;
+  iconTitle: string;
+  title: string;
+  link: string;
+};
+const { icon, iconTitle, title, link } = Astro.props;
+---
+
+<li class="flex flex-row gap-2">
+  <Icon name={icon} title={iconTitle} size={28} class="fill-white self-center" />
+  <Link external href={link}>
+    <p class="text-lg font-medium">{title}</p>
+  </Link>
+</li>

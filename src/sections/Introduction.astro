@@ -1,0 +1,42 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import ContactItem from '@/components/introduction/ContactItem.astro';
+import Link from '@/components/Link.astro';
+
+type Props = HTMLAttributes<'section'>;
+const props = Astro.props;
+---
+
+<section {...props} class="flex flex-col gap-6">
+  <div class="flex flex-col gap-2">
+    <p>
+      Hello and welcome to my little website. I'm a passionate full-stack developer from
+      Finland&nbsp;🇫🇮.
+    </p>
+    <p>
+      I have deep interest in programming, software documentation, testing, and deployment and Linux
+      servers. I also enjoy the creative side of web development, particularly UI/UX design and
+      accessibility.
+    </p>
+    <p>
+      In my free time I like reading, mostly books, blog posts and articles. I also like listening
+      to music. Sometimes I watch documentaries, movies and TV shows. To keep track of everything I
+      have read and watched, I created
+      <Link href="https://eino.jankku.fi">Eino</Link> — more about it below.
+    </p>
+  </div>
+  <ul class="flex content-center gap-6">
+    <ContactItem
+      icon="github"
+      iconTitle="GitHub logo"
+      link="https://github.com/Jankku/"
+      title="Jankku"
+    />
+    <ContactItem
+      icon="discord"
+      iconTitle="Discord logo"
+      link="https://discordapp.com/users/157855363352363008"
+      title="Jankku"
+    />
+  </ul>
+</section>

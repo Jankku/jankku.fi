@@ -1,0 +1,16 @@
+---
+type Props = {
+  href: string;
+  external?: boolean;
+};
+
+const { href, external } = Astro.props;
+---
+
+<a
+  href={href}
+  class="hover:underline hover:decoration-2 hover:underline-offset-4 [text-decoration-skip-ink:none]"
+  rel={external ? 'noopener noreferrer' : undefined}
+>
+  <slot /></a
+>

@@ -1,0 +1,53 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import SectionTitle from '../SectionTitle.astro';
+
+type Props = HTMLAttributes<'section'>;
+const props = Astro.props;
+
+const frontendTechnologies = [
+  'HTML/CSS',
+  'JavaScript/TypeScript',
+  'React and React Native',
+  'Vue',
+  'Kotlin (Android)',
+];
+
+const backendTechnologies = [
+  'Linux',
+  'Java',
+  'Node.js and Express.js',
+  'PostgreSQL',
+  'Docker (including Compose)',
+];
+---
+
+<section {...props}>
+  <SectionTitle>Technologies</SectionTitle>
+  <div class="flex flex-col gap-6 md:flex-row md:gap-12">
+    <fieldset>
+      <legend>
+        <h3 class="text-lg font-medium pb-3">Frontend</h3>
+      </legend>
+      <ul class="list-inside indent-1">
+        {
+          frontendTechnologies.map((tech) => (
+            <li class="list-decimal marker:[font-family:Concourse-Index]">{tech}</li>
+          ))
+        }
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>
+        <h3 class="text-lg font-medium pb-3">Backend</h3>
+      </legend>
+      <ul class="list-inside indent-1">
+        {
+          backendTechnologies.map((tech) => (
+            <li class="list-decimal marker:[font-family:Concourse-Index]">{tech}</li>
+          ))
+        }
+      </ul>
+    </fieldset>
+  </div>
+</section>

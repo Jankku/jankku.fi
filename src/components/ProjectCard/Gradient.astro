@@ -1,0 +1,50 @@
+---
+import type { Project } from '@/content/config';
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = {
+  type: Project['gradient'];
+} & HTMLAttributes<'div'>;
+const { type, ...rest } = Astro.props;
+---
+
+<div {...rest} id={type}>
+  <slot />
+</div>
+
+<style>
+  #liikennekartta {
+    background: rgb(88, 68, 149);
+    background: linear-gradient(0deg, rgba(88, 68, 149, 1) 0%, rgba(135, 118, 189, 1) 100%);
+  }
+
+  #eino {
+    background: rgb(55, 83, 110);
+    background: linear-gradient(0deg, rgba(55, 83, 110, 1) 0%, rgba(113, 182, 248, 1) 100%);
+  }
+
+  #alphawall {
+    background: rgb(92, 71, 108);
+    background: linear-gradient(0deg, rgba(92, 71, 108, 1) 0%, rgba(87, 136, 217, 1) 100%);
+  }
+
+  #yle-rss-reader {
+    background: rgb(36, 83, 139);
+    background: linear-gradient(0deg, rgba(36, 83, 139, 1) 0%, rgba(87, 146, 217, 1) 100%);
+  }
+
+  #notes {
+    background: rgb(23, 113, 71);
+    background: linear-gradient(0deg, rgba(23, 113, 71, 1) 0%, rgba(110, 197, 151, 1) 100%);
+  }
+
+  #elainvisa {
+    background: rgb(48, 85, 131);
+    background: linear-gradient(0deg, rgba(48, 85, 131, 1) 0%, rgba(46, 127, 202, 1) 100%);
+  }
+
+  #kuntarekry {
+    background: rgb(70, 203, 161);
+    background: linear-gradient(0deg, rgba(70, 203, 161, 1) 0%, rgba(10, 139, 194, 1) 80%);
+  }
+</style>

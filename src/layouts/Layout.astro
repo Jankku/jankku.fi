@@ -1,0 +1,123 @@
+---
+import Footer from '@/sections/Footer.astro';
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="url" content="https://jankku.fi" />
+    <meta name="description" content="Jan-Erik's website" />
+    <meta name="language" content="en_us" />
+    <meta name="author" content="Jan-Erik" />
+    <meta property="og:site_name" content="jankku.fi" />
+    <meta property="og:title" content="Jan-Erik" />
+    <meta property="og:description" content="Jan-Erik's website" />
+    <meta property="og:url" content="https://jankku.fi" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="theme-color" content="#1679ca" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" sizes="any" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <script
+      is:inline
+      defer
+      data-domain="jankku.fi"
+      src="https://analytics.jankku.fi/js/plausible.js"></script>
+    <style>
+      @view-transition {
+        navigation: auto;
+      }
+    </style>
+    <script is:inline>
+      const colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+      document.documentElement.classList.add(colorScheme);
+    </script>
+  </head>
+  <body class="min-h-screen bg-white font-sans text-black dark:bg-slate-950 dark:text-gray-100">
+    <slot />
+    <Footer />
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @font-face {
+        font-family: 'Cooper Hewitt';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/CooperHewitt-Book.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Cooper Hewitt';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url(/fonts/CooperHewitt-Medium.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Cooper Hewitt';
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url(/fonts/CooperHewitt-Semibold.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Cooper Hewitt';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(/fonts/CooperHewitt-Bold.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Concourse-Index';
+        font-style: normal;
+        font-weight: normal;
+        font-stretch: normal;
+        font-display: auto;
+        src: url(/fonts/Concourse-Index-Regular.woff2) format('woff2');
+      }
+
+      :root {
+        color-scheme: light;
+        font-size: 1.1rem;
+      }
+
+      a {
+        @apply text-sky-700;
+      }
+
+      @media screen and (prefers-color-scheme: dark) {
+        :root {
+          color-scheme: dark;
+        }
+
+        a {
+          @apply text-cyan-500;
+        }
+      }
+
+      :focus-visible {
+        @apply ring-cyan-500;
+        outline: 5px solid var(--tw-ring-color);
+      }
+    </style>
+  </body>
+</html>

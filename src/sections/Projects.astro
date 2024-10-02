@@ -1,0 +1,33 @@
+---
+import ProjectCard from '@/components/ProjectCard/ProjectCard.astro';
+import SectionTitle from '@/components/SectionTitle.astro';
+import type { HTMLAttributes } from 'astro/types';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+
+type Props = HTMLAttributes<'section'>;
+const props = Astro.props;
+---
+
+<section {...props}>
+  <SectionTitle>Projects</SectionTitle>
+
+  <ul class="flex flex-col gap-8">
+    {
+      projects
+        .toSorted((a, b) => a.data.order - b.data.order)
+        .map(({ data, slug }) => (
+          <ProjectCard
+            title={data.title}
+            description={data.description}
+            platform={data.platform}
+            slug={slug}
+            logo={data.logo}
+            gradient={data.gradient}
+            tags={data.tags}
+          />
+        ))
+    }
+  </ul>
+</section>

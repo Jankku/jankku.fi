@@ -1,0 +1,59 @@
+---
+import Gradient from './Gradient.astro';
+import Tag from '../Tag.astro';
+import type { Project } from '@/content/config';
+
+type Props = {
+  title: string;
+  description: string;
+  platform: Project['platform'];
+  gradient: Project['gradient'];
+  slug: string;
+  logo: string;
+  tags: Array<string>;
+};
+const { title, description, platform, gradient, slug, logo, tags } = Astro.props;
+const toTitleCase = (str: string) => str[0].toUpperCase() + str.slice(1);
+const platforms = platform.map(toTitleCase).join(', ');
+---
+
+<li>
+  <a
+    draggable="false"
+    href={`projects/${slug}`}
+    aria-title={title}
+    class="group grid overflow-hidden rounded-lg border border-solid border-gray-200 bg-slate-50 text-black no-underline hover:border-sky-400 hover:bg-slate-100 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-gray-700 dark:hover:bg-slate-800 sm:grid-cols-2"
+  >
+    <div class="flex flex-col gap-4 columns-1 p-4 sm:col-span-1">
+      <div>
+        <h3 class="text-lg pb-1 font-semibold">{title}</h3>
+        <p class="opacity-80">
+          {description}
+        </p>
+      </div>
+      <dl>
+        <dt class="opacity-70 font-semibold [font-variant-caps:all-small-caps]">Platform</dt>
+        <dl>{platforms}</dl>
+      </dl>
+    </div>
+    <Gradient
+      class="group row-start-1 flex h-full flex-col flex-nowrap overflow-hidden group-hover:opacity-90 sm:col-span-1 sm:row-start-auto sm:w-56 sm:justify-self-end"
+      type={gradient}
+    >
+      <div
+        class="transition duration-300 ease-in-out group-hover:scale-110 flex grow items-center justify-center py-8"
+      >
+        <img
+          draggable="false"
+          class="h-16 w-16 object-contain sm:h-20 sm:w-20"
+          src={logo}
+          alt={`${title} logo`}
+          loading="lazy"
+        />
+      </div>
+      <ul class="relative bottom-0 flex text-nowrap justify-end gap-1 pb-2 pr-2">
+        {tags.map((tag) => <Tag label={tag} size="sm" />)}
+      </ul>
+    </Gradient>
+  </a>
+</li>
