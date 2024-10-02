@@ -1,7 +1,7 @@
 ---
 order: 1
 title: Eino
-description: Feature-rich book & movie tracker I made for myself. My favourite project ❤️
+description: Feature-rich book & movie tracker I made for myself ❤️
 platform: [server, web, android]
 link: https://eino.jankku.fi
 github: https://github.com/Jankku/eino-web

@@ -46,9 +46,9 @@ const hasGithub = github !== undefined;
 
 <Layout title={title}>
   <div id="overlay"></div>
-  <Gradient type={gradient} class="flex h-44 sm:h-32 w-full">
+  <Gradient type={gradient} class="flex h-52 sm:h-36 w-full">
     <div
-      class="flex w-full flex-col px-4 sm:px-0 pb-4 py-4 sm:py-0 sm:flex-row items-center sm:justify-center gap-4 bg-gradient-to-t from-white dark:from-slate-950 sm:mx-auto"
+      class="flex w-full flex-col px-4 sm:px-0 pt-8 sm:py-0 sm:flex-row items-center sm:justify-center gap-6 md:gap-4 bg-gradient-to-t from-white dark:from-slate-950 sm:mx-auto"
     >
       <img
         draggable="false"
@@ -56,10 +56,10 @@ const hasGithub = github !== undefined;
         alt={`${title} logo`}
         class="h-16 w-16 object-contain sm:h-20 sm:w-20"
       />
-      <h1 class="text-4xl font-bold text-black dark:text-white">{title}</h1>
+      <h1 class="text-3xl font-bold text-black dark:text-white">{title}</h1>
     </div>
   </Gradient>
-  <main class="min-h-screen mx-auto flex max-w-xl flex-col gap-6 px-6 pt-6 pb-12 sm:px-0">
+  <main class="min-h-screen mx-auto flex max-w-xl flex-col gap-6 px-6 pb-12 md:pt-4 sm:px-0">
     <section class="flex flex-col gap-8 pb-4">
       <div class="flex flex-wrap gap-x-2 gap-y-6 flex-row items-baseline justify-between">
         <ul class="flex flex-row gap-2 flex-wrap">
