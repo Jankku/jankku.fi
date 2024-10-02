@@ -15,17 +15,19 @@ const props = Astro.props;
 
   <ul class="flex flex-col gap-8">
     {
-      projects.map(({ data, slug }) => (
-        <ProjectCard
-          title={data.title}
-          description={data.description}
-          platform={data.platform}
-          slug={slug}
-          logo={data.logo}
-          gradient={data.gradient}
-          tags={data.tags}
-        />
-      ))
+      projects
+        .toSorted((a, b) => a.data.order - b.data.order)
+        .map(({ data, slug }) => (
+          <ProjectCard
+            title={data.title}
+            description={data.description}
+            platform={data.platform}
+            slug={slug}
+            logo={data.logo}
+            gradient={data.gradient}
+            tags={data.tags}
+          />
+        ))
     }
   </ul>
 </section>

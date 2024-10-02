@@ -1,4 +1,5 @@
 ---
+order: 6
 title: Notes
 description: Native note-taking Android application
 platform: [android]

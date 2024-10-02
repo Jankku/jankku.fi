@@ -1,4 +1,5 @@
 ---
+order: 1
 title: Eino
 description: Feature-rich book & movie tracker I made for myself. My favourite project ❤️
 platform: [server, web, android]

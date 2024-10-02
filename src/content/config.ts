@@ -3,6 +3,7 @@ import { z, defineCollection, type ImageFunction } from 'astro:content';
 const projectSchema = (image: ImageFunction) =>
   z
     .object({
+      order: z.number(),
       title: z.string(),
       description: z.string(),
       platform: z.array(z.enum(['web', 'server', 'android', 'mobile'])),

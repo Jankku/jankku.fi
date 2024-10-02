@@ -1,4 +1,5 @@
 ---
+order: 7
 title: Animal quiz
 description: School project for learning jQuery/Bootstrap
 platform: [web]

@@ -1,4 +1,5 @@
 ---
+order: 3
 title: AlphaWall
 description: Native mobile app for finding the perfect wallpaper
 platform: [android]

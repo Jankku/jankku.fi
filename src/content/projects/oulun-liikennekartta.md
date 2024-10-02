@@ -1,4 +1,5 @@
 ---
+order: 2
 title: Oulun liikennekartta
 description: Feature-rich traffic map React Native app for Oulu
 platform: [android]

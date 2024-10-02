@@ -1,4 +1,5 @@
 ---
+order: 5
 title: Kuntarekry mobile
 description: Student project, MVP mobile app for FCG Finnish Consulting Group
 platform: [android]

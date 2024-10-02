@@ -1,4 +1,5 @@
 ---
+order: 4
 title: Yle RSS reader
 description: React Native app for reading Yle's regional RSS feeds
 platform: [android]
