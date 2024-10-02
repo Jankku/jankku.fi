@@ -8,7 +8,7 @@ const props = Astro.props;
 const frontendTechnologies = [
   'HTML/CSS',
   'JavaScript/TypeScript',
-  'React & React Native',
+  'React and React Native',
   'Vue',
   'Kotlin (Android)',
 ];
@@ -16,7 +16,7 @@ const frontendTechnologies = [
 const backendTechnologies = [
   'Linux',
   'Java',
-  'Node.js & Express.js',
+  'Node.js and Express.js',
   'PostgreSQL',
   'Docker (including Compose)',
 ];
@@ -27,18 +27,26 @@ const backendTechnologies = [
   <div class="flex flex-col gap-6 md:flex-row md:gap-12">
     <fieldset>
       <legend>
-        <h3 class="text-xl font-medium pb-2">Frontend</h3>
+        <h3 class="text-lg font-medium pb-3">Frontend</h3>
       </legend>
-      <ul class="list-inside indent-1 [list-style-type:circled-alpha]">
-        {frontendTechnologies.map((tech) => <li class="before:ps-2 marker:text-xl">{tech}</li>)}
+      <ul class="list-inside indent-1">
+        {
+          frontendTechnologies.map((tech) => (
+            <li class="list-decimal marker:[font-family:Concourse-Index]">{tech}</li>
+          ))
+        }
       </ul>
     </fieldset>
     <fieldset>
       <legend>
-        <h3 class="text-xl font-medium pb-2">Backend</h3>
+        <h3 class="text-lg font-medium pb-3">Backend</h3>
       </legend>
-      <ul class="list-inside indent-1 [list-style-type:circled-alpha]">
-        {backendTechnologies.map((tech) => <li class="before:ps-2 marker:text-xl">{tech}</li>)}
+      <ul class="list-inside indent-1">
+        {
+          backendTechnologies.map((tech) => (
+            <li class="list-decimal marker:[font-family:Concourse-Index]">{tech}</li>
+          ))
+        }
       </ul>
     </fieldset>
   </div>

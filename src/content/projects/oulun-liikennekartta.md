@@ -1,5 +1,5 @@
 ---
-title: Oulun Liikennekartta
+title: Oulun liikennekartta
 description: Feature-rich traffic map React Native app for Oulu
 platform: [android]
 github: https://github.com/Jankku/oulunliikenne-kartta

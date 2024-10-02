@@ -1,6 +1,6 @@
 ---
-title: Kuntarekry Mobile
-description: MVP mobile app for FCG. Student group project
+title: Kuntarekry mobile
+description: Student project, MVP mobile app for FCG Finnish Consulting Group
 platform: [android]
 github: https://github.com/Jankku/kuntarekry-mobile
 logo: /kuntarekry.svg

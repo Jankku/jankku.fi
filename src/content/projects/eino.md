@@ -14,7 +14,9 @@ features:
   - Audit logging with Discord webhook support
   - CRUD actions and search for books/movies
   - Finna, Open Library and TMDB integrations for book/movie images
-  - User profile with user information and statistics, share top books/movies, light/dark themes, export/import data, delete account etc.
-  - Web frontend is unit & E2E tested with Vitest and Playwright respectively
+  - User profile with user information and statistics, share top books/movies, export/import data, delete account etc.
+  - Material theme with light and dark themes
+  - Web frontend is unit and end-to-end tested with Vitest and Playwright respectively
   - Docker image built with GitHub Actions, released to ghcr.io and deployed with Docker Compose
+  - Native Android application built with Kotlin
 ---

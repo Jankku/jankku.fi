@@ -1,5 +1,5 @@
 ---
-title: Animal Quiz
+title: Animal quiz
 description: School project for learning jQuery/Bootstrap
 platform: [web]
 link: /elainvisa

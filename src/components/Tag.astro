@@ -7,18 +7,16 @@ export type Props = {
 const { label, size = 'md', color = 'gray' } = Astro.props;
 
 const sizes = {
-  sm: 'px-2 py-0 [font-size:0.8rem]',
-  md: 'px-2 py-0.5 text-base',
+  sm: 'px-2 py-0.5 text-xs tracking-wider',
+  md: 'px-2 pt-0.5 text-xs md:text-sm tracking-wider',
 };
 
 const colors = {
-  gray: 'bg-gray-900 text-gray-200',
+  gray: 'bg-gray-900 text-gray-100',
   blue: 'bg-slate-100 text-black ring-gray-300 dark:bg-slate-800 dark:text-blue-100 ring-1 dark:ring-slate-700',
 };
 ---
 
-<li
-  class=`rounded-lg font-bold tracking-wider ${colors[color]} ${sizes[size]} [font-variant-caps:all-small-caps]`
->
+<li class=`rounded-lg font-semibold ${colors[color]} ${sizes[size]}`>
   {label}
 </li>

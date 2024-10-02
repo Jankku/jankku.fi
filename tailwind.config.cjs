@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Cooper Hewitt', ...defaultTheme.fontFamily.sans],
-      }
+        sans: ['Cooper Hewitt', 'Concourse-Index', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [],

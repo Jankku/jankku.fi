@@ -1,6 +1,7 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 import ContactItem from '@/components/introduction/ContactItem.astro';
+import Link from '@/components/Link.astro';
 
 type Props = HTMLAttributes<'section'>;
 const props = Astro.props;
@@ -20,7 +21,7 @@ const props = Astro.props;
       My other hobbies are mostly reading books and listening to music. Sometimes I watch
       documentaries, movies and TV shows. To keep track of everything I have read and watched, I
       created
-      <a href="https://eino.jankku.fi">Eino</a>. More about it below.
+      <Link href="https://eino.jankku.fi">Eino</Link>. More about it below.
     </p>
   </div>
   <ul class="flex content-center gap-6">

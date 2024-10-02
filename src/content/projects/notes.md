@@ -1,6 +1,6 @@
 ---
 title: Notes
-description: Native note-taking application
+description: Native note-taking Android application
 platform: [android]
 github: https://github.com/Jankku/notes
 logo: /notes.svg
@@ -9,7 +9,8 @@ gradient: notes
 tags: [Kotlin, MVVM, Room]
 features:
   - Notes saved automatically
-  - Export/import notes
+  - List and grid view types
+  - Export/import notes to/from a file
   - Light/dark themes
   - Finnish and English languages
 ---

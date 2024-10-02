@@ -1,5 +1,5 @@
 ---
-title: Yle RSS Reader
+title: Yle RSS reader
 description: React Native app for reading Yle's regional RSS feeds
 platform: [android]
 github: https://github.com/Jankku/rn-rss-reader
