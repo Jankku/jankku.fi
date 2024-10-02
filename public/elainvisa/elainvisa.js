@@ -5,35 +5,35 @@ const questions = [
     question: 'Mikä eläin tämä on?',
     answers: ['Kissa', 'Leopardi', 'Leijona', 'Susi'],
     correctIndex: 2,
-    image: 'elainvisa/img/leijona.jpg',
+    image: '/elainvisa/img/leijona.jpg',
     imageSrc: 'https://pixabay.com/fi/photos/lion-petoel%C3%A4in-vaarallinen-harja-3372720/',
   },
   {
     question: 'Mikä eläin tämä on?',
     answers: ['Laama', 'Alligaattori', 'Virtahepo', 'Norsu'],
     correctIndex: 3,
-    image: 'elainvisa/img/norsu.jpg',
+    image: '/elainvisa/img/norsu.jpg',
     imageSrc: 'https://pixabay.com/fi/photos/norsu-el%C3%A4inten-safari-nis%C3%A4k%C3%A4s-114543/',
   },
   {
     question: 'Mikä eläin tämä on?',
     answers: ['Jääkarhu', 'Panda', 'Karhu', 'Laiskiainen'],
     correctIndex: 1,
-    image: 'elainvisa/img/panda.jpg',
+    image: '/elainvisa/img/panda.jpg',
     imageSrc: 'https://pixabay.com/fi/photos/panda-uhanalainen-harvinaisten-505149/',
   },
   {
     question: 'Mikä eläin tämä on?',
     answers: ['Seepra', 'Kameli', 'Kirahvi', 'Hirvi'],
     correctIndex: 2,
-    image: 'elainvisa/img/kirahvi.jpg',
+    image: '/elainvisa/img/kirahvi.jpg',
     imageSrc: 'https://pixabay.com/fi/photos/kirahvi-el%C3%A4inten-safari-5800387/',
   },
   {
     question: 'Mikä eläin tämä on?',
     answers: ['Ilves', 'Gepardi', 'Tiikeri', 'Hyeena'],
     correctIndex: 0,
-    image: 'elainvisa/img/ilves.jpg',
+    image: '/elainvisa/img/ilves.jpg',
     imageSrc: 'https://pixabay.com/fi/photos/predator-kissa-el%C3%A4inkunnan-4432461/',
   },
 ];
@@ -126,7 +126,7 @@ $(function () {
     if (!initCompleted) {
       for (let i = 0; i < QUESTION_AMOUNT; i++) {
         $('#trophies').append(
-          `<i class="fa fs-1 text-white px-1 fa-trophy" name="trophy" aria-hidden="true"></i>`
+          `<i class="fa fs-1 text-white px-1 fa-trophy" name="trophy" aria-hidden="true"></i>`,
         );
       }
     }
