@@ -11,9 +11,8 @@ const props = Astro.props;
 ---
 
 <section {...props}>
-  <SectionTitle>Projects</SectionTitle>
-
-  <ul class="flex flex-col gap-8">
+  <SectionTitle title="Projects" />
+  <ul aria-labelledby="projects" class="flex flex-col gap-8">
     {
       projects
         .toSorted((a, b) => a.data.order - b.data.order)

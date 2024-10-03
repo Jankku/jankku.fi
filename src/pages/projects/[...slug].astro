@@ -62,7 +62,7 @@ const hasGithub = github !== undefined;
   <main class="min-h-screen mx-auto flex max-w-xl flex-col gap-6 px-6 pb-12 md:pt-4 sm:px-0">
     <section class="flex flex-col gap-8 pb-4">
       <div class="flex flex-wrap gap-x-2 gap-y-6 flex-row items-baseline justify-between">
-        <ul class="flex flex-row gap-2 flex-wrap">
+        <ul aria-label="Tags" class="flex flex-row gap-2 flex-wrap">
           {tags.map((tag) => <Tag label={tag} color="blue" />)}
         </ul>
         <div class="flex flex-row gap-4">
@@ -73,8 +73,8 @@ const hasGithub = github !== undefined;
       <p class="text-lg">{description}</p>
     </section>
     <section>
-      <SectionTitle>Features</SectionTitle>
-      <ul class="list-inside indent-1">
+      <SectionTitle title="Features" />
+      <ul aria-labelledby="features" class="list-inside indent-1">
         {
           features.map((feature) => (
             <li class="list-decimal marker:[font-family:Concourse-Index] pb-1">{feature}</li>
@@ -85,7 +85,7 @@ const hasGithub = github !== undefined;
     {
       screenshots ? (
         <section>
-          <SectionTitle>Screenshots</SectionTitle>
+          <SectionTitle title="Screenshots" />
           <div class="flex flex-col gap-8">
             {screenshots.map((screenshot) => (
               <div id="screenshot">
@@ -106,7 +106,7 @@ const hasGithub = github !== undefined;
 
 <style>
   .image {
-    cursor: pointer;
+    cursor: zoom-in;
   }
 
   .fullscreen-image {
@@ -117,7 +117,7 @@ const hasGithub = github !== undefined;
     height: 100vh;
     object-fit: contain;
     z-index: 9999;
-    cursor: pointer;
+    cursor: zoom-out;
     padding: 1rem;
   }
 

@@ -23,31 +23,27 @@ const backendTechnologies = [
 ---
 
 <section {...props}>
-  <SectionTitle>Technologies</SectionTitle>
+  <SectionTitle title="Technologies" />
   <div class="flex flex-col gap-6 md:flex-row md:gap-12">
-    <fieldset>
-      <legend>
-        <h3 class="text-lg font-medium pb-3">Frontend</h3>
-      </legend>
-      <ul class="list-inside indent-1">
+    <div>
+      <h3 id="frontend" class="text-lg font-medium pb-3">Frontend</h3>
+      <ul aria-labelledby="frontend" class="list-inside indent-1">
         {
           frontendTechnologies.map((tech) => (
             <li class="list-decimal marker:[font-family:Concourse-Index]">{tech}</li>
           ))
         }
       </ul>
-    </fieldset>
-    <fieldset>
-      <legend>
-        <h3 class="text-lg font-medium pb-3">Backend</h3>
-      </legend>
-      <ul class="list-inside indent-1">
+    </div>
+    <div>
+      <h3 id="backend" class="text-lg font-medium pb-3">Backend</h3>
+      <ul aria-labelledby="backend" class="list-inside indent-1">
         {
           backendTechnologies.map((tech) => (
             <li class="list-decimal marker:[font-family:Concourse-Index]">{tech}</li>
           ))
         }
       </ul>
-    </fieldset>
+    </div>
   </div>
 </section>

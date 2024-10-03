@@ -1,7 +1,7 @@
 ---
 order: 7
 title: Animal quiz
-description: School project for learning jQuery/Bootstrap
+description: School project for learning jQuery and Bootstrap
 platform: [web]
 link: /elainvisa
 logo: /elainvisa.png
@@ -10,5 +10,5 @@ gradient: elainvisa
 tags: [JQuery, Bootstrap]
 features:
   - Playful UI built with Bootstrap
-  - Game results display correct/incorrect guesses
+  - Game results display correct/incorrect guesses with feedback
 ---
