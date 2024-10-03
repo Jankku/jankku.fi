@@ -21,7 +21,6 @@ const platforms = platform.map(toTitleCase).join(', ');
   <a
     draggable="false"
     href={`projects/${slug}`}
-    aria-title={title}
     class="group grid overflow-hidden rounded-lg border border-solid border-gray-200 bg-slate-50 text-black no-underline hover:border-sky-400 hover:bg-slate-100 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-gray-700 dark:hover:bg-slate-800 sm:grid-cols-2"
   >
     <div class="flex flex-col gap-4 columns-1 p-4 sm:col-span-1">
@@ -33,7 +32,7 @@ const platforms = platform.map(toTitleCase).join(', ');
       </div>
       <dl>
         <dt class="opacity-70 font-semibold [font-variant-caps:all-small-caps]">Platform</dt>
-        <dl>{platforms}</dl>
+        <dd>{platforms}</dd>
       </dl>
     </div>
     <Gradient
@@ -47,11 +46,11 @@ const platforms = platform.map(toTitleCase).join(', ');
           draggable="false"
           class="h-16 w-16 object-contain sm:h-20 sm:w-20"
           src={logo}
-          alt={`${title} logo`}
+          role="presentation"
           loading="lazy"
         />
       </div>
-      <ul class="relative bottom-0 flex text-nowrap justify-end gap-1 pb-2 pr-2">
+      <ul aria-label="Tags" class="relative bottom-0 flex text-nowrap justify-end gap-1 pb-2 pr-2">
         {tags.map((tag) => <Tag label={tag} size="sm" />)}
       </ul>
     </Gradient>
