@@ -6,10 +6,29 @@ import Selfhosting from '@/sections/Selfhosting.astro';
 import Technologies from '../components/introduction/Technologies.astro';
 import TableOfContents from '@/components/TableOfContents.astro';
 import SkipToMain from '@/components/SkipToMain.astro';
+import BackToTop from '@/components/BackToTop.astro';
 ---
+
+<script>
+  const onScroll = () => {
+    const backToTop = document.getElementById('back-to-top')!;
+    const scrolledTo = window.scrollY + window.innerHeight;
+    const tenPercent = document.body.scrollHeight * 0.1;
+    const isReachBottom = document.body.scrollHeight - tenPercent <= scrolledTo;
+    if (isReachBottom) {
+      backToTop.classList.add('fixed');
+      backToTop.classList.remove('hidden');
+    } else {
+      backToTop.classList.remove('fixed');
+      backToTop.classList.add('hidden');
+    }
+  };
+  window.addEventListener('scroll', onScroll);
+</script>
 
 <Layout title="Jan-Erik">
   <SkipToMain />
+  <div id="page-top" tabindex="-1"></div>
   <header class="mb-12 bg-blue-50 bg-[url('/hero.svg')] pt-8 dark:bg-slate-900">
     <div class="bg-gradient-to-t from-slate-50 dark:from-slate-950">
       <h1 id="title" class="pt-16 md:pt-12 text-center text-5xl font-bold">Jan-Erik</h1>
@@ -29,5 +48,6 @@ import SkipToMain from '@/components/SkipToMain.astro';
     <Technologies />
     <Projects />
     <Selfhosting />
+    <BackToTop />
   </main>
 </Layout>

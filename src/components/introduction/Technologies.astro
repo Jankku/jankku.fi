@@ -1,6 +1,8 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 import SectionTitle from '../SectionTitle.astro';
+import List from '../List.astro';
+import ListItem from '../ListItem.astro';
 
 type Props = HTMLAttributes<'section'>;
 const props = Astro.props;
@@ -27,23 +29,15 @@ const backendTechnologies = [
   <div class="flex flex-col gap-6 md:flex-row md:gap-12">
     <div>
       <h3 id="frontend" class="text-lg font-medium pb-3">Frontend</h3>
-      <ol aria-labelledby="frontend" class="list-inside indent-1">
-        {
-          frontendTechnologies.map((tech) => (
-            <li class="list-decimal marker:[font-family:Concourse-Index]">{tech}</li>
-          ))
-        }
-      </ol>
+      <List aria-labelledby="frontend">
+        {frontendTechnologies.map((tech) => <ListItem>{tech}</ListItem>)}
+      </List>
     </div>
     <div>
       <h3 id="backend" class="text-lg font-medium pb-3">Backend</h3>
-      <ol aria-labelledby="backend" class="list-inside indent-1">
-        {
-          backendTechnologies.map((tech) => (
-            <li class="list-decimal marker:[font-family:Concourse-Index]">{tech}</li>
-          ))
-        }
-      </ol>
+      <List aria-labelledby="backend">
+        {backendTechnologies.map((tech) => <ListItem>{tech}</ListItem>)}
+      </List>
     </div>
   </div>
 </section>

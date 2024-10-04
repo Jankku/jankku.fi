@@ -7,6 +7,8 @@ import Tag from '@/components/Tag.astro';
 import SectionTitle from '@/components/SectionTitle.astro';
 import GithubButton from '@/components/GithubButton.astro';
 import OpenButton from '@/components/OpenButton.astro';
+import List from '@/components/List.astro';
+import ListItem from '@/components/ListItem.astro';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -74,13 +76,9 @@ const hasGithub = github !== undefined;
     </section>
     <section>
       <SectionTitle title="Features" />
-      <ol aria-labelledby="features" class="list-inside indent-1">
-        {
-          features.map((feature) => (
-            <li class="list-decimal marker:[font-family:Concourse-Index] pb-2">{feature}</li>
-          ))
-        }
-      </ol>
+      <List aria-labelledby="features">
+        {features.map((feature) => <ListItem>{feature}</ListItem>)}
+      </List>
     </section>
     {
       screenshots ? (
