@@ -10,7 +10,7 @@ const { href, external, ...rest } = Astro.props;
 <a
   {...rest}
   href={href}
-  class="hover:underline hover:decoration-2 hover:underline-offset-4 [text-decoration-skip-ink:none]"
+  class="font-medium dark:font-normal hover:underline hover:decoration-1.5 hover:underline-offset-4 [text-decoration-skip-ink:none]"
   rel={external ? 'noopener noreferrer' : undefined}
 >
   <slot /></a

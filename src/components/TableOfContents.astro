@@ -3,15 +3,14 @@ import Link from './Link.astro';
 
 type Props = {
   className: string;
+  titleClassName: string;
 };
 
-const { className } = Astro.props;
+const { className, titleClassName } = Astro.props;
 ---
 
 <nav class={`${className}`} aria-labelledby="table-of-contents">
-  <h2 id="table-of-contents" class="text-xs pb-3 tracking-widest uppercase font-semibold">
-    Table of contents
-  </h2>
+  <h2 id="table-of-contents" class={titleClassName}>Contents</h2>
   <ul class="flex flex-col gap-1">
     <li>
       <Link href="#technologies">Technologies</Link>
