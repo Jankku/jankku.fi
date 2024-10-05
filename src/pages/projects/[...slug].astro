@@ -43,6 +43,11 @@ const hasGithub = github !== undefined;
   const images = document.querySelectorAll('#screenshot') as NodeListOf<HTMLImageElement>;
   images?.forEach((image) => {
     image.addEventListener('click', toggleFullscreen);
+    image.addEventListener('keypress', (event) => {
+      if (event.key === 'Enter') {
+        toggleFullscreen(event);
+      }
+    });
   });
 </script>
 
@@ -86,14 +91,14 @@ const hasGithub = github !== undefined;
           <SectionTitle title="Screenshots" />
           <div class="flex flex-col gap-8">
             {screenshots.map((screenshot) => (
-              <div id="screenshot">
-                <Image
-                  loading="lazy"
-                  src={screenshot}
-                  alt={`${title} screenshot`}
-                  class="h-100 w-full object-contain image"
-                />
-              </div>
+              <Image
+                tabindex="0"
+                id="screenshot"
+                loading="lazy"
+                src={screenshot}
+                alt={`${title} screenshot`}
+                class="h-100 w-full object-contain image"
+              />
             ))}
           </div>
         </section>

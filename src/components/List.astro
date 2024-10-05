@@ -1,3 +1,10 @@
-<ol class="list-inside indent-1">
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'ol'>;
+const props = Astro.props;
+---
+
+<ol {...props} class="list-inside indent-1">
   <slot />
 </ol>
