@@ -1,16 +1,21 @@
 ---
 type Props = {
   href: string;
+  hoverUnderline?: boolean;
   external?: boolean;
 };
 
-const { href, external, ...rest } = Astro.props;
+const { href, hoverUnderline = false, external, ...rest } = Astro.props;
+
+const underlineClasses = hoverUnderline
+  ? 'hover:underline decoration-2 underline-offset-4'
+  : 'underline decoration-2 underline-offset-4 [text-decoration-skip-ink:none] visited:text-purple-700 dark:visited:text-purple-400';
 ---
 
 <a
   {...rest}
   href={href}
-  class="font-medium dark:font-normal hover:underline hover:decoration-1.5 hover:underline-offset-4 [text-decoration-skip-ink:none]"
+  class={`${underlineClasses} font-medium dark:font-normal`}
   rel={external ? 'noopener noreferrer' : undefined}
 >
   <slot /></a
