@@ -31,10 +31,12 @@ const hasGithub = github !== undefined;
 
     if (!img.classList.contains('fullscreen-image')) {
       img.classList.add('fullscreen-image');
+      img.setAttribute('aria-label', 'Click to minimize');
       overlay.style.display = 'block';
       document.body.style.overflow = 'hidden';
     } else {
       img.classList.remove('fullscreen-image');
+      img.removeAttribute('aria-label');
       overlay.style.display = 'none';
       document.body.style.overflow = 'auto';
     }
@@ -96,7 +98,7 @@ const hasGithub = github !== undefined;
                 id="screenshot"
                 loading="lazy"
                 src={screenshot}
-                alt={`${title} screenshot`}
+                alt={`${title} screenshot, click to enlarge`}
                 class="h-100 w-full object-contain image"
               />
             ))}
