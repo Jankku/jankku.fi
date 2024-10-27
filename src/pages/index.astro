@@ -14,8 +14,8 @@ import BackToTop from '@/components/BackToTop.astro';
     const backToTop = document.getElementById('back-to-top')!;
     const scrolledTo = window.scrollY + window.innerHeight;
     const tenPercent = document.body.scrollHeight * 0.1;
-    const isReachBottom = document.body.scrollHeight - tenPercent <= scrolledTo;
-    if (isReachBottom) {
+    const isBottomReached = document.body.scrollHeight - tenPercent <= scrolledTo;
+    if (isBottomReached) {
       backToTop.classList.add('fixed');
       backToTop.classList.remove('hidden');
     } else {
@@ -28,7 +28,7 @@ import BackToTop from '@/components/BackToTop.astro';
 
 <Layout title="Jan-Erik">
   <SkipToMain />
-  <div id="page-top" tabindex="-1"></div>
+  <span id="top" tabindex="-1"></span>
   <header class="mb-12 bg-blue-50 bg-[url('/hero.svg')] pt-8 dark:bg-slate-900">
     <div class="bg-gradient-to-t from-slate-50 dark:from-slate-950">
       <h1 id="title" class="pt-16 md:pt-12 text-center text-5xl font-bold">Jan-Erik</h1>
