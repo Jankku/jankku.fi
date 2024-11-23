@@ -12,7 +12,7 @@ const { icon, alt, title, link } = Astro.props;
 ---
 
 <li class="flex flex-row gap-2">
-  <Icon name={icon} size={28} class="fill-white self-center" role="presentation" />
+  <Icon name={icon} size={28} class="fill-white self-center" aria-hidden="true" />
   <Link external href={link} aria-label={alt}>
     <span class="text-lg font-medium">{title}</span>
   </Link>

@@ -16,7 +16,7 @@ features:
   - CRUD actions and search for books/movies
   - Finna, Open Library and TMDB integrations for book/movie images
   - User profile with user information and statistics, share top books/movies, export/import data, delete account etc.
-  - Material theme with light and dark themes
+  - UI built using Material UI, light and dark modes
   - Web frontend is unit and end-to-end tested with Vitest and Playwright respectively
   - Docker image built with GitHub Actions, released to ghcr.io and deployed with Docker Compose
   - Native Android application built with Kotlin

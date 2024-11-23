@@ -13,6 +13,6 @@ features:
   - Traffic camera list/detail screens, with images to every available direction
   - Parking list/detail screens with capacity and pricing information
   - Traffic announcements and roadworks with filtering and ability to view them on map
-  - Material 3 design with light and dark themes
+  - Material 3 design with light and dark modes
   - Uses open data from oulunliikenne.fi GraphQL API
 ---

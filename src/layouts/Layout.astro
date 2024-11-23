@@ -24,7 +24,6 @@ const { title } = Astro.props;
     <meta property="og:url" content="https://jankku.fi" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
-    <meta name="theme-color" content="#1679ca" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" sizes="any" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -69,6 +68,7 @@ const { title } = Astro.props;
     </script>
   </head>
   <body
+    id="top"
     class="min-h-screen bg-gray-50 font-sans text-slate-900 dark:bg-slate-950 dark:text-gray-200"
   >
     <slot />
