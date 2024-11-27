@@ -24,6 +24,23 @@ import BackToTop from '@/components/BackToTop.astro';
     }
   };
   window.addEventListener('scroll', onScroll);
+
+  document.querySelectorAll('a.project-link').forEach((link) => {
+    link.addEventListener('keydown', (event) => {
+      if ((event as KeyboardEvent).key !== 'Enter') return;
+      const linkId = document.activeElement?.id;
+      if (linkId?.startsWith('project-link-')) {
+        sessionStorage.setItem('focusedElementId', linkId);
+      }
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const focusedElement = document.getElementById(sessionStorage.getItem('focusedElementId')!);
+    if (!focusedElement) return;
+    focusedElement.focus();
+    sessionStorage.removeItem('focusedElementId');
+  });
 </script>
 
 <Layout title="Jan-Erik">
