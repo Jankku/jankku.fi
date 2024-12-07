@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import GitHubIcon from '../icons/github.svg';
 
 type Props = {
   link: string;
@@ -13,6 +13,6 @@ const { link } = Astro.props;
   rel="noopener noreferrer"
   class="no-underline inline-flex items-center gap-2 rounded-lg bg-neutral-800 border border-neutral-700 px-4 py-2 text-center font-semibold text-white hover:bg-neutral-700 hover:border-neutral-600"
 >
-  <Icon name="github" size={22} class="fill-white" />
+  <GitHubIcon width={22} height={22} class="fill-white" aria-hidden="true" />
   <span class="[padding-top:4px] md:pt-0.5">GitHub</span>
 </a>

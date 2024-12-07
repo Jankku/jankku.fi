@@ -1,3 +1,4 @@
+import { glob } from 'astro/loaders';
 import { z, defineCollection, type ImageFunction } from 'astro:content';
 
 const projectSchema = (image: ImageFunction) =>
@@ -29,11 +30,10 @@ const projectSchema = (image: ImageFunction) =>
 
 export type Project = z.infer<ReturnType<typeof projectSchema>>;
 
-const projectsCollection = defineCollection({
-  type: 'content',
+const projects = defineCollection({
+  type: 'content_layer',
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
   schema: ({ image }) => projectSchema(image),
 });
 
-export const collections = {
-  projects: projectsCollection,
-};
+export const collections = { projects };

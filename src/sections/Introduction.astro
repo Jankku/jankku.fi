@@ -2,6 +2,8 @@
 import type { HTMLAttributes } from 'astro/types';
 import ContactItem from '@/components/introduction/ContactItem.astro';
 import Link from '@/components/Link.astro';
+import GitHubIcon from '../icons/github.svg';
+import DiscordIcon from '../icons/discord.svg';
 
 type Props = HTMLAttributes<'section'>;
 const props = Astro.props;
@@ -26,17 +28,27 @@ const props = Astro.props;
     </p>
   </div>
   <ul class="flex gap-6">
+    <ContactItem alt="GitHub – Jankku" link="https://github.com/Jankku/" title="Jankku">
+      <GitHubIcon
+        width={28}
+        height={28}
+        slot="icon"
+        class="fill-white self-center"
+        aria-hidden="true"
+      />
+    </ContactItem>
     <ContactItem
-      icon="github"
-      alt="GitHub – Jankku"
-      link="https://github.com/Jankku/"
-      title="Jankku"
-    />
-    <ContactItem
-      icon="discord"
       alt="Discord – Jankku"
       link="https://discordapp.com/users/157855363352363008"
       title="Jankku"
-    />
+    >
+      <DiscordIcon
+        width={28}
+        height={28}
+        slot="icon"
+        class="fill-white self-center"
+        aria-hidden="true"
+      />
+    </ContactItem>
   </ul>
 </section>

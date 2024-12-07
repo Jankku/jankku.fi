@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import ArrowTopRightIcon from '../icons/arrow-top-right.svg';
 
 type Props = {
   link: string;
@@ -14,5 +14,5 @@ const { link } = Astro.props;
   class="no-underline inline-flex items-center px-4 py-2 text-center font-semibold gap-1 rounded-lg border border-sky-400 bg-sky-500 text-white hover:bg-sky-400 hover:border-sky-300"
 >
   <span class="[padding-top:2px] md:pt-0">Open</span>
-  <Icon name="arrow-top-right" size={22} class="fill-white self-center" />
+  <ArrowTopRightIcon width={22} height={22} class="fill-white self-center" aria-hidden="true" />
 </a>
