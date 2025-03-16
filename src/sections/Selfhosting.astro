@@ -11,18 +11,18 @@ const props = Astro.props;
 
 <section {...props}>
   <SectionTitle title="Self-hosting" />
-  <p class="pb-4">
+  <p class="pb-8">
     This and my other websites are hosted on a VPS using Nginx and Docker Compose. I also host some
     third-party services which are listed below.
   </p>
   <List aria-labelledby="self-hosting">
-    <ListItem class="list-decimal marker:[font-family:Concourse-Index]">
+    <ListItem>
       <Link href="https://status.jankku.fi">Uptime Kuma (status.jankku.fi)</Link>
     </ListItem>
-    <ListItem class="list-decimal marker:[font-family:Concourse-Index]">
+    <ListItem>
       <Link href="https://rss.jankku.fi">Miniflux (rss.jankku.fi)</Link>
     </ListItem>
-    <ListItem class="list-decimal marker:[font-family:Concourse-Index]">
+    <ListItem>
       <Link href="https://analytics.jankku.fi">Plausible Analytics (analytics.jankku.fi)</Link>
     </ListItem>
   </List>

@@ -10,10 +10,9 @@ const props = Astro.props;
 ---
 
 <section {...props} class="flex flex-col gap-6">
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-4">
     <p>
-      Hello 👋 and welcome to my little website. I'm a passionate full-stack developer from
-      Finland&nbsp;🇫🇮.
+      Hello 👋 and welcome to my little website. I'm a full-stack developer from Finland&nbsp;🇫🇮.
     </p>
     <p>
       I am highly interested in programming, especially full-stack and mobile development. I know my
@@ -21,19 +20,20 @@ const props = Astro.props;
       good user experience and accessibility are important to me.
     </p>
     <p>
-      In my free time I read a lot, mostly books, blog posts and articles. I also like listening to
-      music. Sometimes I watch documentaries, movies and TV shows. To keep track of everything I
-      have read and watched, I created
-      <Link href="https://eino.jankku.fi">Eino</Link> — more about it below.
+      In my free time I listen to music and read a lot, mostly books, blog posts and articles. My
+      favourite book genres are historical fiction and detective. To keep track of the books I read
+      and the movies I watch, I created a service called <Link href="https://eino.jankku.fi"
+        >Eino</Link
+      > — more about it below.
     </p>
   </div>
-  <ul class="flex gap-6">
+  <ul class="flex gap-8">
     <ContactItem alt="GitHub – Jankku" link="https://github.com/Jankku/" title="Jankku">
       <GitHubIcon
         width={28}
         height={28}
         slot="icon"
-        class="fill-white self-center"
+        class="fill-slate-900 dark:fill-white self-center"
         aria-hidden="true"
       />
     </ContactItem>
@@ -46,7 +46,7 @@ const props = Astro.props;
         width={28}
         height={28}
         slot="icon"
-        class="fill-white self-center"
+        class="fill-slate-900 dark:fill-white self-center"
         aria-hidden="true"
       />
     </ContactItem>

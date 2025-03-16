@@ -19,14 +19,14 @@ const platforms = platform.map(toTitleCase).join(', ');
 
 <li>
   <div
-    class="relative group grid sm:grid-cols-2 overflow-hidden rounded-lg border border-solid border-gray-300 bg-slate-100 text-slate-900 no-underline hover:border-sky-500 hover:bg-slate-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-gray-700 dark:hover:bg-slate-800"
+    class="relative group grid focus-within:outline-5 focus-within:outline-offset-2 focus-within:outline-cyan-500 sm:grid-cols-2 overflow-hidden rounded-lg border border-solid border-gray-300 bg-slate-100 text-slate-900 no-underline hover:border-sky-500 hover:bg-slate-200 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-gray-700 dark:hover:bg-slate-800"
   >
     <div class="flex flex-col columns-1 p-4 sm:col-span-1">
       <a
         draggable="false"
         id={`project-link-${slug}`}
         href={`projects/${slug}`}
-        class="project-link focus:outline-none after:focus-visible:outline after:[outline:5px] after:[outline-offset:-5px] after:absolute after:inset-0 z-10"
+        class="project-link focus-visible:outline-none! after:focus-visible:outline after:absolute after:inset-0 z-10"
       >
         <h3 class="text-lg font-semibold pb-1 opacity-90 text-slate-900 dark:text-gray-100">
           {title}

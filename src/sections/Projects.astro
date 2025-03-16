@@ -1,4 +1,5 @@
 ---
+import Link from '@/components/Link.astro';
 import ProjectCard from '@/components/ProjectCard/ProjectCard.astro';
 import SectionTitle from '@/components/SectionTitle.astro';
 import type { HTMLAttributes } from 'astro/types';
@@ -12,7 +13,7 @@ const props = Astro.props;
 
 <section {...props}>
   <SectionTitle title="Projects" />
-  <ul aria-labelledby="projects" class="flex flex-col gap-8">
+  <ul aria-labelledby="projects" class="flex flex-col gap-10 md:gap-8">
     {
       projects
         .toSorted((a, b) => a.data.order - b.data.order)

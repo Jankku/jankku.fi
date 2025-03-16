@@ -5,6 +5,6 @@ type Props = HTMLAttributes<'ol'>;
 const props = Astro.props;
 ---
 
-<ol {...props} class="list-inside indent-1">
+<ol {...props} class="list-inside [text-indent:-2rem] ml-8">
   <slot />
 </ol>

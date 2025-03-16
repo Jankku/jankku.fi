@@ -8,16 +8,16 @@ type Props = HTMLAttributes<'section'>;
 const props = Astro.props;
 
 const frontendTechnologies = [
-  'HTML/CSS',
-  'JavaScript/TypeScript',
+  'HTML and CSS',
+  'TypeScript',
   'React and React Native',
   'Vue',
-  'Kotlin (Android)',
+  'Native Android apps',
 ];
 
 const backendTechnologies = [
   'Linux',
-  'Java',
+  'Java and Kotlin',
   'Node.js and Express.js',
   'PostgreSQL',
   'Docker (including Compose)',
@@ -26,7 +26,11 @@ const backendTechnologies = [
 
 <section {...props}>
   <SectionTitle title="Technologies" />
-  <div class="flex flex-col gap-6 md:flex-row md:gap-12">
+  <p class="pb-8">
+    Below are some of the programming languages, frameworks, and technologies I have worked with
+    professionally or used in personal projects.
+  </p>
+  <div class="flex flex-col gap-8 md:flex-row md:gap-12">
     <div>
       <h3 id="frontend" class="text-lg font-medium pb-3">Frontend</h3>
       <List aria-labelledby="frontend">
