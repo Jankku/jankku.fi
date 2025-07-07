@@ -7,7 +7,7 @@ link: https://eino.jankku.fi
 github: https://github.com/Jankku/eino-web
 logo: /eino.svg
 screenshots:
-  - src: ./eino-web-books.png
+  - src: ./eino-web-books.jpg
     alt: "Books page. Two column layout with book list on the left and book details on the right."
   - src: ./eino-web-profile.png
     alt: "Profile page with user profile picture, account details and actions, and book and movie statistics."
