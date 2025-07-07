@@ -93,7 +93,7 @@ const hasGithub = github !== undefined;
   <main class="min-h-screen mx-auto flex max-w-xl flex-col gap-6 px-6 pb-12 md:pt-4 sm:px-0">
     <section class="flex flex-col gap-8 pb-4">
       <div class="flex flex-wrap gap-x-2 gap-y-6 flex-row items-baseline justify-between">
-        <ul aria-label="Tags" class="flex flex-row gap-2 flex-wrap">
+        <ul aria-label="Technologies" class="flex flex-row gap-2 flex-wrap">
           {tags.map((tag) => <Tag label={tag} color="blue" />)}
         </ul>
         <div class="flex flex-row gap-4">
@@ -113,18 +113,20 @@ const hasGithub = github !== undefined;
       screenshots ? (
         <section>
           <SectionTitle title="Screenshots" />
-          <div class="flex flex-col gap-8">
+          <ul aria-labelledby="screenshots" class="flex flex-col gap-8">
             {screenshots.map((screenshot) => (
-              <Image
-                tabindex="0"
-                id="screenshot"
-                loading="lazy"
-                src={screenshot}
-                alt={`${title} screenshot, click to enlarge`}
-                class="w-full object-contain image"
-              />
+              <li>
+                <Image
+                  tabindex="0"
+                  id="screenshot"
+                  loading="lazy"
+                  src={screenshot.src}
+                  alt={screenshot.alt}
+                  class="w-full object-contain image"
+                />
+              </li>
             ))}
-          </div>
+          </ul>
         </section>
       ) : null
     }

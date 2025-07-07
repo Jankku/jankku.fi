@@ -6,7 +6,13 @@ platform: [server, web, android]
 link: https://eino.jankku.fi
 github: https://github.com/Jankku/eino-web
 logo: /eino.svg
-screenshots: [./eino-web-books.png, ./eino-web-profile.png, ./eino-android.png]
+screenshots:
+  - src: ./eino-web-books.png
+    alt: "Books page. Two column layout with book list on the left and book details on the right."
+  - src: ./eino-web-profile.png
+    alt: "Profile page with user profile picture, account details and actions, and book and movie statistics."
+  - src: ./eino-android.png
+    alt: "Three mobile app screens showing book list, book details and profile screens."
 gradient: eino
 tags: [TS, React, Express]
 features: 

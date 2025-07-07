@@ -5,7 +5,9 @@ description: React Native app for reading Yle's regional RSS feeds
 platform: [android]
 github: https://github.com/Jankku/rn-rss-reader
 logo: /yle-rss-reader.svg
-screenshots: [./yle-rss-reader.png]
+screenshots:
+  - src: ./yle-rss-reader.png
+    alt: "Three mobile app screens showing list of news, news reader and settings screens."
 gradient: yle-rss-reader
 tags: [JS, XML, Expo]
 features:

@@ -12,7 +12,14 @@ const projectSchema = (image: ImageFunction) =>
       link: z.union([z.string(), z.string().url()]).optional(),
       github: z.string().url().optional(),
       logo: z.string(),
-      screenshots: z.array(image()).optional(),
+      screenshots: z
+        .array(
+          z.object({
+            src: image(),
+            alt: z.string(),
+          }),
+        )
+        .optional(),
       gradient: z.enum([
         'kuntarekry',
         'liikennekartta',

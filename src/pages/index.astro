@@ -16,15 +16,11 @@ import BackToTop from '@/components/BackToTop.astro';
     const tenPercent = document.body.scrollHeight * 0.1;
     const isBottomReached = document.body.scrollHeight - tenPercent <= scrolledTo;
     if (isBottomReached) {
-      backToTop.classList.add('visible');
-      backToTop.classList.add('opacity-100');
-      backToTop.classList.remove('invisible');
-      backToTop.classList.remove('opacity-0');
+      backToTop.classList.add('visible', 'opacity-100');
+      backToTop.classList.remove('invisible', 'opacity-0');
     } else {
-      backToTop.classList.remove('visible');
-      backToTop.classList.remove('opacity-100');
-      backToTop.classList.add('invisible');
-      backToTop.classList.add('opacity-0');
+      backToTop.classList.remove('visible', 'opacity-100');
+      backToTop.classList.add('invisible', 'opacity-0');
     }
   };
   window.addEventListener('scroll', onScroll);

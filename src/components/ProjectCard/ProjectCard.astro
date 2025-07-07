@@ -59,7 +59,10 @@ const platforms = platform.map(toTitleCase).join(', ');
           loading="lazy"
         />
       </div>
-      <ul aria-label="Tags" class="relative bottom-0 flex text-nowrap justify-end gap-1 pb-2 pr-2">
+      <ul
+        aria-label="Project technologies"
+        class="relative bottom-0 flex text-nowrap justify-end gap-1 pb-2 pr-2"
+      >
         {tags.map((tag) => <Tag label={tag} size="sm" />)}
       </ul>
     </Gradient>

@@ -5,7 +5,9 @@ description: Native note-taking Android application
 platform: [android]
 github: https://github.com/Jankku/notes
 logo: /notes.svg
-screenshots: [./notes.png]
+screenshots:
+  - src: ./notes.png
+    alt: "Three mobile app screens showing empty notes list, notes list with one note and settings screen."
 gradient: notes
 tags: [Kotlin, MVVM, Room]
 features:
