@@ -37,12 +37,6 @@ const { title } = Astro.props;
       defer
       data-domain="jankku.fi"
       src="https://analytics.jankku.fi/js/plausible.js"></script>
-    <script is:inline>
-      const colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light';
-      document.documentElement.classList.add(colorScheme);
-    </script>
   </head>
   <body
     id="top"
