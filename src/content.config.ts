@@ -1,5 +1,6 @@
 import { glob } from 'astro/loaders';
-import { z, defineCollection, type ImageFunction } from 'astro:content';
+import { z } from 'astro/zod';
+import { defineCollection, type ImageFunction } from 'astro:content';
 
 const projectSchema = (image: ImageFunction) =>
   z
@@ -9,8 +10,8 @@ const projectSchema = (image: ImageFunction) =>
       description: z.string(),
       platform: z.array(z.enum(['web', 'server', 'android', 'mobile'])),
       features: z.array(z.string()),
-      link: z.union([z.string(), z.string().url()]).optional(),
-      github: z.string().url().optional(),
+      link: z.union([z.string(), z.url()]).optional(),
+      github: z.url().optional(),
       logo: z.string(),
       screenshots: z
         .array(

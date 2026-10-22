@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import tailwind from '@tailwindcss/vite';
 
 // https://astro.build/config
@@ -6,12 +6,12 @@ export default defineConfig({
   vite: {
     plugins: [tailwind()],
   },
-  experimental: {
-    fonts: [
-      {
-        provider: 'local',
-        name: 'Cooper Hewitt',
-        cssVariable: '--font-cooper-hewitt',
+  fonts: [
+    {
+      provider: fontProviders.local(),
+      name: 'Cooper Hewitt',
+      cssVariable: '--font-cooper-hewitt',
+      options: {
         variants: [
           {
             src: ['./src/fonts/CooperHewitt-Book.woff2'],
@@ -35,10 +35,12 @@ export default defineConfig({
           },
         ],
       },
-      {
-        provider: 'local',
-        name: 'Concourse-Index',
-        cssVariable: '--font-concourse-index',
+    },
+    {
+      provider: fontProviders.local(),
+      name: 'Concourse-Index',
+      cssVariable: '--font-concourse-index',
+      options: {
         variants: [
           {
             src: ['./src/fonts/Concourse-Index-Regular.woff2'],
@@ -47,6 +49,6 @@ export default defineConfig({
           },
         ],
       },
-    ],
-  },
+    },
+  ],
 });
